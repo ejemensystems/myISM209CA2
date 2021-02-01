@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="grid-container">
+        <div class="navigation-bar grid-item-row-1">
+            <div class="navigation-bar-left">
+                <div>
+                    <a href="/" >Home</a>
+                </div>
+                <div>
+                    <a href="/products-and-services/">Products and Services</a>
+                </div>
+                <div>
+                    <a href="/about-us/">About Us</a>
+                </div>
+            </div>
+            <div class="navigation-bar-right">
+                <div>
+                    <input type="search">
+                    <button>Search</button>
+                </div>
+                <div>
+                    <a href="/register/" class="active">Sign up</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-row-2">
+            <h2 class="signup-title">{{title}}: {{information}}</h2>
+            <form method="post" action="/process-register/">
+                <div class="form-grid">
+                    <label>Firstname: </label><input type="firstname" name="firstname" placeholder="Enter firstname here" required>
+                    <label>Surname: </label><input type="surname" name="surname" placeholder="Enter surname here" required>
+                    <label>Date of Birth: </label><input type="date of birth" name="date of birth" placeholder="Enter date of birth here" required>
+                    <label>Residential address: </label><input type="residential address" name="residential address" placeholder="Enter residential address" required>
+                    <label>Nationality: </label><input type="nationality" name="nationality" placeholder="Enter nationality here" required>
+                    <label>National Identification Number: </label><input type="national identification number" name="national identification number" placeholder="national identification number" required>
+                    &nbsp;<input type="submit" value="Register" class="button">
+                    <label>&nbsp;</label><label>&nbsp;</label>
+                    <label>Not yet a user? </label> <a href="/signup">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock%}
